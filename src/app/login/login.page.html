@@ -1,0 +1,29 @@
+
+  <ion-content class="bg">
+    <div class="logo">
+      <ion-row>
+    <ion-col text-center>
+    <img src="/assets/img/logo.png"/> 
+    </ion-col>
+    </ion-row>
+    </div>
+    <ion-card class="card">
+    <ion-item>
+      <ion-input placeholder="username" required type="text"  [(ngModel)]="un" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-input placeholder="password" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="pw"></ion-input>
+      <ion-icon [name] ="passwordToggleIcon" slot="end"
+       (click)="togglePassword()">
+      </ion-icon>
+      
+    </ion-item>
+  
+      </ion-card>
+      
+    <ion-button class="button3" (click)="login()" expand="block" 
+    size="large" fill="outline" >
+     &nbsp;<b>Log In</b></ion-button>
+
+</ion-content>
